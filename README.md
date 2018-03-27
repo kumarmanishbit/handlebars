@@ -16,12 +16,12 @@ Handlebars.js is a popular templating engine that is powerful, simple to use and
 Handlebars templates look like regular HTML, with embedded handlebars expressions.
 
 ```
-&#x3C;div class=&#x22;entry&#x22;&#x3E; <br/>
-  &#x3C;h1&#x3E;{{title}}&#x3C;/h1&#x3E;<br/>
-  &#x3C;div class=&#x22;body&#x22;&#x3E; <br/>
-    {{body}} <br/>
-  &#x3C;/div&#x3E; <br/>
-&#x3C;/div&#x3E; <br/>
+<div class="entry"> 
+  <h1>{{title}}</h1>
+  <div class="body"> 
+    {{body}} 
+  </div> 
+</div> 
 ```
 
 A handlebars expression is a {{, some contents, followed by a }}
@@ -29,14 +29,14 @@ A handlebars expression is a {{, some contents, followed by a }}
 You can deliver a template to the browser by including it in a <script> tag.
 
 ```
-&#x3C;script id=&#x22;entry-template&#x22; type=&#x22;text/x-handlebars-template&#x22;&#x3E; <br/>
-  &#x3C;div class=&#x22;entry&#x22;&#x3E; <br/>
-    &#x3C;h1&#x3E;{{title}}&#x3C;/h1&#x3E; <br/>
-    &#x3C;div class=&#x22;body&#x22;&#x3E; <br/>
-      {{body}} <br/>
-    &#x3C;/div&#x3E; <br/>
-  &#x3C;/div&#x3E; <br/>
-&#x3C;/script&#x3E; <br/>
+<script id="entry-template" type="text/x-handlebars-template"> 
+  <div class="entry"> 
+    <h1>{{title}}</h1> 
+    <div class="body"> 
+      {{body}} 
+    </div> 
+  </div> 
+</script> 
 ```
 
 Compile a template in JavaScript by using Handlebars.compile
@@ -49,7 +49,7 @@ Using the Handlebars precompiler, you can precompile your Handlebars templates t
 By doing so you don't need to do Handelbars.compile(template), and it will save time on client side.
 
 ```
-&#x3C;script type=&#x22;text/javascript&#x22; src=&#x22;precomp.js&#x22;&#x3E;&#x3C;/script&#x3E; <br/>
+<script type="text/javascript" src="precomp.js"></script>
 ```
 
 ```
